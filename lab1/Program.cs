@@ -7,6 +7,6 @@ class Program
         var repository = new ShoppingListRepository(new JsonSerializer());
         var commandHandler = await CommandHandler.Initialize(repository);
         var ui = new UserInterface(repository, commandHandler);
-        ui.MainMenu();
+         await ui.MainMenu();
     }
 }

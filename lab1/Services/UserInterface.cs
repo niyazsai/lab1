@@ -11,7 +11,7 @@ public class UserInterface
         this.commandHandler = commandHandler;
     }
 
-    public void MainMenu()
+    public async Task MainMenu()
     {
         while (true)
         {
@@ -32,7 +32,7 @@ public class UserInterface
                     commandHandler.ViewLists();
                     break;
                 case 3:
-                    repository.SaveData(commandHandler.GetShoppingLists()); // Используем SaveData напрямую
+                 await   repository.SaveData(commandHandler.GetShoppingLists()); // Используем SaveData напрямую
                     return;
             }
         }

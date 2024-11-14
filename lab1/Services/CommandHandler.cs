@@ -24,7 +24,7 @@ public class CommandHandler
 
     public void CreateNewList()
     {
-        //Console.Clear();
+        Console.Clear();
         string listName = InputValidator.GetNonEmptyString("Введите название нового списка: ");
         var shoppingList = new ShoppingList(listName);
 
@@ -59,7 +59,7 @@ public class CommandHandler
             return;
         }
         
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("Доступные списки:");
         for (int i = 0; i < shoppingLists.Count; i++)
         {
@@ -74,7 +74,7 @@ public class CommandHandler
     {
         while (true)
         {
-            //Console.Clear();
+            Console.Clear();
             Console.WriteLine($"=== Список: {shoppingList.Name} ===");
             Console.WriteLine("1. Просмотреть товары");
             Console.WriteLine("2. Отметить покупку");
@@ -110,7 +110,7 @@ public class CommandHandler
 
     private void ViewProducts(ShoppingList shoppingList)
     {
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("Товары в списке:");
         for (int i = 0; i < shoppingList.Products.Count; i++)
         {
@@ -125,7 +125,7 @@ public class CommandHandler
 
     private void MarkPurchase(ShoppingList shoppingList)
     {
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("Товары в списке:");
         for (int i = 0; i < shoppingList.Products.Count; i++)
         {
@@ -142,7 +142,7 @@ public class CommandHandler
 
     private void EditList(ShoppingList shoppingList)
     {
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("Добавьте товары в список. Введите 'готово' для завершения.");
         while (true)
         {
@@ -163,7 +163,7 @@ public class CommandHandler
 
     private void ViewHistory(ShoppingList shoppingList)
     {
-        //Console.Clear();
+        Console.Clear();
         if (shoppingList.History.Changes.Count == 0)
         {
             Console.WriteLine("История изменений пуста.");
@@ -182,7 +182,7 @@ public class CommandHandler
 
     private void RemoveProduct(ShoppingList shoppingList)
     {
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("Товары в списке:");
         for (int i = 0; i < shoppingList.Products.Count; i++)
         {
